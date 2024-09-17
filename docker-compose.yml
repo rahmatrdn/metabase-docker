@@ -28,6 +28,8 @@ services:
     volumes:
       - db-postgres:/var/lib/postgresql
     hostname: postgres
+    ports:
+      - "5432:5432"
     environment:
       POSTGRES_USER: ${DB_USER}
       POSTGRES_DB: metabase_db
